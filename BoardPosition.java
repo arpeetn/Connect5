@@ -7,14 +7,14 @@ package cpsc2150.extendedConnectX.models;
  * @invariant LOWEST_ROW >= maxRow <= ROW AND LOWEST_COLUMN >= maxColumn <= COLUMN
  */
 public class BoardPosition {
-    private int r;
-    private int c;
+    private int row;
+    private int column;
 
     /**
      * @description creates a new BoardPosition with the specified row and column numbers
      *
-     * @param column column
-     * @param row row
+     * @param c column
+     * @param r row
      *
      * @pre
      * row = r AND column = c
@@ -22,9 +22,9 @@ public class BoardPosition {
      * @post gets the number of columns and rows for Board
      */
 
-    public BoardPosition(int row, int column) {
-        r = row;
-        c = column;
+    public BoardPosition(int r, int c) {
+        row = r;
+        column = c;
     }
 
     /**
@@ -39,7 +39,7 @@ public class BoardPosition {
      */
     public int getRow() {
 
-        return r;
+        return row;
     }
 
     /**
@@ -55,7 +55,7 @@ public class BoardPosition {
 
     public int getColumn() {
 
-        return c;
+        return column;
     }
 
     /**
@@ -82,8 +82,6 @@ public class BoardPosition {
     }
     public String toString() {
 
-        String sep = "";
-
-        return sep;
+        return row + "," + column;
     }
 }
