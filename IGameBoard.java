@@ -1,5 +1,8 @@
 package cpsc2150.extendedConnectX.models;
-
+/**
+ * @author Arpeet Naik
+ * @version 1.0
+ */
 public interface IGameBoard {
 
     public static final int ROW = 6;
