@@ -1,5 +1,8 @@
 package cpsc2150.extendedConnectX.models;
-
+/**
+ * @author Arpeet Naik
+ * @version 1.0
+ */
 public abstract class AbsGameBoard implements IGameBoard {
 
     /**
