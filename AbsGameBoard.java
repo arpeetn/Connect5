@@ -30,19 +30,28 @@ public abstract class AbsGameBoard implements IGameBoard {
 
     @Override
     public String toString() {
-        String board = "|";
-        for (int i = 0; i < getNumColumns(); i++) board += i + "|";
+        String sep = "|";
 
-        board += "\n|";
-
-        for (int i = getNumRows()-1; i >= 0; i--) {
-            for(int j = 0; j < getNumColumns(); j++) {
-                BoardPosition pos = new BoardPosition(i,j);
-                board += whatsAtPos(pos) + "|";
+        for(int i = 0; i < getNumColumns(); i++) {
+            if(i < 10) {
+                sep = sep.concat(" ");
             }
-            if (i - 1 != -1) board += "\n|";
+            sep = sep.concat(Integer.toString(i));
+            sep = sep.concat("|");
         }
-        board+="\n";
-        return board;
+        sep =sep.concat("\n");
+
+        for(int i = (getNumRows() - 1); i >= 0; i--) {
+            for(int k = 0; k < getNumColumns(); k++) {
+                BoardPosition pos = new BoardPosition(i, k);
+                char c = whatsAtPos(pos);
+                sep= sep.concat("|");
+                sep = sep.concat(Character.toString(c));
+                sep = sep.concat(" ");
+            }
+            sep = sep.concat("|");
+            sep = sep.concat("\n");
+        }
+        return sep;
     }
 }
