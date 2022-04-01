@@ -1,8 +1,7 @@
 package cpsc2150.extendedConnectX.models;
 /**
- * JavaDoc and contract for BoardPosition
  *
- * @ArpeetNaik
+ * @author Arpeet Naik
  * @version 1.0
  *
  * @invariant LOWEST_ROW >= maxRow <= ROW AND LOWEST_COLUMN >= maxColumn <= COLUMN
