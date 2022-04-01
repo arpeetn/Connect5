@@ -1,5 +1,8 @@
 package cpsc2150.extendedConnectX.models;
-
+/**
+ * @author Arpeet Naik
+ * @version 1.0
+ */
 
 import java.util.Scanner;
 
